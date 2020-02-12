@@ -1,0 +1,13 @@
+{
+    "name": "marcin/deptrac",
+    "authors": [
+        {
+            "name": "mmp4k",
+            "email": "marcin@pilsniak.pl"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "sensiolabs-de/deptrac-shim": "^0.6.0"
+    }
+}

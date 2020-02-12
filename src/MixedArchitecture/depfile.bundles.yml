@@ -1,0 +1,19 @@
+paths:
+  - ./src/MixedArchitecture
+exclude_files:
+  - .*test.*
+layers:
+  - name: ContentBundle
+    collectors:
+      - type: className
+        regex: .*ContentBundle.*
+  - name: SubscriptionBundle
+    collectors:
+      - type: className
+        regex: .*SubscriptionBundle.*
+  - name: UserBundle
+    collectors:
+      - type: className
+        regex: .*UserBundle.*
+ruleset:
+  - ~

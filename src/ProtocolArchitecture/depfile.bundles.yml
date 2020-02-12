@@ -1,0 +1,23 @@
+paths:
+  - ./src/ProtocolArchitecture
+layers:
+  - name: SubscriptionBundle
+    collectors:
+      - type: bool
+        must:
+          - type: className
+            regex: .*SubscriptionBundle.*
+        must_not:
+            - type: className
+              regex: .*Interface.*
+  - name: UserBundle
+    collectors:
+      - type: bool
+        must:
+          - type: className
+            regex: .*UserBundle.*
+        must_not:
+          - type: className
+            regex: .*Interface.*
+ruleset:
+  - ~
