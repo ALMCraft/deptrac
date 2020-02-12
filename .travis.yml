@@ -1,0 +1,9 @@
+language: php
+php: 7.4
+install: composer install
+script:
+  - ./vendor/bin/deptrac src/BundleArchitecture/depfile.yml
+  - ./vendor/bin/deptrac src/MixedArchitecture/depfile.bundles.yml
+  - ./vendor/bin/deptrac src/MixedArchitecture/depfile.in_bundle.yml
+  - ./vendor/bin/deptrac src/ProtocolArchitecture/depfile.bundles.yml
+  - ./vendor/bin/deptrac src/SymfonyArchitecture/depfile.yml
