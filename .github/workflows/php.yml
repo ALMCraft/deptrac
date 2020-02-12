@@ -1,0 +1,22 @@
+name: PHP Composer
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: composer install --prefer-dist --no-progress --no-suggest
+
+    - name: Run deptrac
+      run: 
+        - ./vendor/bin/deptrac analyse src/BundleArchitecture/depfile.yml
+        - ./vendor/bin/deptrac analyse src/MixedArchitecture/depfile.bundles.yml
+        - ./vendor/bin/deptrac analyse src/MixedArchitecture/depfile.in_bundle.yml
+        - ./vendor/bin/deptrac analyse src/ProtocolArchitecture/depfile.bundles.yml
+        - ./vendor/bin/deptrac analyse src/SymfonyArchitecture/depfile.yml
