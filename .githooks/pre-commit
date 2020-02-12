@@ -1,0 +1,7 @@
+#!/bin/sh
+
+./vendor/bin/deptrac analyse src/BundleArchitecture/depfile.yml
+./vendor/bin/deptrac analyse src/MixedArchitecture/depfile.bundles.yml
+./vendor/bin/deptrac analyse src/MixedArchitecture/depfile.in_bundle.yml
+./vendor/bin/deptrac analyse src/ProtocolArchitecture/depfile.bundles.yml
+./vendor/bin/deptrac analyse src/SymfonyArchitecture/depfile.yml
